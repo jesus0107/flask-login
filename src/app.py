@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, url_for, redirect
+from flask_mysqldb import MySQL
+from config import settings
 
 app = Flask(__name__)
+db = MySQL(app)
 
 
 @app.route('/')
